@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'vueEvent',
+  name: 'VueEvent',
   components: { },
   data () {
     return {

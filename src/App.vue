@@ -7,7 +7,7 @@
         <b-tabs pills card vertical>
           <b-tab title="Vue - 이벤트 한정자" active>
             <b-card-text>
-              <vueEvent></vueEvent>
+              <VueEvent></VueEvent>
             </b-card-text>
           </b-tab>
           <b-tab title="Tab 3">
@@ -18,17 +18,25 @@
           </b-tab>
           <b-tab title="HTML,CSS">
             <b-card-text>
-              <partHTML></partHTML>
+              <PartHTML></PartHTML>
             </b-card-text>
           </b-tab>
           <b-tab title="GIT">
             <b-card-text>
-              <partGIT></partGIT>
+              <PartGIT></PartGIT>
             </b-card-text>
           </b-tab>
 
         </b-tabs>
       </b-card>
+    </div>
+
+    <div class="">
+      <router-link :to="{ name: 'PartGIT', params: {} }"></router-link>
+      <router-view></router-view>
+
+
+
     </div>
 
 
@@ -37,12 +45,12 @@
 </template>
 
 <script>
-import partGIT from './components/part-git'
-import partHTML from './components/part-html'
-import vueEvent from './components/vue-event'
+import PartGIT from './components/part-git'
+import PartHTML from './components/part-html'
+import VueEvent from './components/vue-event'
 export default {
   name: 'app',
-  components: { partGIT, partHTML, vueEvent },
+  components: { PartGIT, PartHTML, VueEvent },
   data () {
     return {
 

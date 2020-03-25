@@ -93,10 +93,12 @@
 
 <script>
 export default {
-  name: 'partHTML',
+  name: 'PartHTML',
   components: { },
   data () {
+    return { //데이터 값이 없어도 리턴 필수
 
+    }
   },
   methods: {
 
