@@ -5,9 +5,32 @@
     <div class="tabW">
       <b-card no-body>
         <b-tabs pills card vertical>
-          <b-tab title="Vue - Router" active>
+          <b-tab title="Vue - Router" >
             <b-card-text>
               <VueRouterEx></VueRouterEx>
+            </b-card-text>
+          </b-tab>
+          <b-tab title="Vue - $emit, bus" active>
+            <b-card-text>
+              <section class="wrap">
+                <h2>Vue.js $emit</h2>
+                <article>
+                  <p>하위 컴포넌트에서 부모 컴포넌트(App.vue 포함)로 이벤트 전달</p>
+                  <VueEmit @totalClick="totalClickUp"></VueEmit> <!--자식 컴포넌트로부터 totalClick 이벤트를 받아서 totalClickUp 함수 실행 -->
+                  <VueEmit @totalClick="totalClickUp"></VueEmit>
+                  <VueEmit @totalClick="totalClickUp"></VueEmit>
+                  <VueBus></VueBus> <!--Bus 테스트를 위해 다른 컴포넌트 생성 후 삽입-->
+
+                  <div class="testTxt">
+                    <p>테스트 텍스트 - $emit test click : {{ totalClicks }}</p>
+                  </div>
+                </article>
+              </section>
+            </b-card-text>
+          </b-tab>
+          <b-tab title="Vue - 클래스 바인딩" >
+            <b-card-text>
+              <VueCSSBind></VueCSSBind>
             </b-card-text>
           </b-tab>
           <b-tab title="Vue - 이벤트 한정자" >
@@ -43,16 +66,28 @@ import PartGIT from './components/part-git'
 import PartHTML from './components/part-html'
 import VueEvent from './components/vue-event'
 import VueRouterEx from './components/vue-router'
+import VueCSSBind from './components/vue-css-bind'
+import VueEmit from './components/vue-emit'
+import VueBus from './components/vue-bus'
 export default {
   name: 'app',
-  components: { PartGIT, PartHTML, VueEvent, VueRouterEx },
+  components: { PartGIT, PartHTML, VueEvent, VueRouterEx, VueCSSBind, VueEmit, VueBus },
   data () {
     return {
+      totalClicks: 0,
 
     }
   },
   methods: {
-  }
+    totalClickUp: function () {
+      this.totalClicks++
+    }
+  },
+  created () {
+    this.$EventBus.$on('clickCountReset', () => { //Bus를 통해 vue-bus 컴포넌트가 보낸 clickCountReset 이벤트 수신 후
+      this.totalClicks = 0  //데이터 처리
+    });
+  },
 }
 </script>
 
@@ -72,5 +107,8 @@ export default {
 }
 .tabW article {
   padding-bottom: 40px;
+}
+.testTxt {
+  margin-top: 20px;
 }
 </style>

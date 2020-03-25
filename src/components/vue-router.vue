@@ -7,6 +7,7 @@
       <router-link :to="{ name: 'PartGIT' }">GIT</router-link> <!--router-link, a 모두 사용 가능-->
       <a href="/html">HTML/CSS</a>
       <a href="/event">Event</a>
+      <a href="/binding">CSS 바인딩</a>
       <a href="/router">Router</a>
       <router-view></router-view> <!--router 불러오는 영역-->
     </article>

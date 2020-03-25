@@ -10,6 +10,7 @@ import router from './router' //router.js import
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.prototype.$EventBus = new Vue(); //Bus 사용 시 등록 필요.
 
 new Vue({
   el: '#app',
