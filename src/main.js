@@ -6,14 +6,13 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/common.css'
-import Router from './router.js'
+import router from './router' //router.js import
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-Vue.use(VueRouter)
 
 new Vue({
   el: '#app',
-  Router,
+  router, //router 설정
   render: h => h(App)
 })
