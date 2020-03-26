@@ -49,7 +49,9 @@
             </b-card-text>
           </b-tab>
           <b-tab title="Javascript">
-            <b-card-text>Tab contents 3</b-card-text>
+            <b-card-text>
+              <PartJS></PartJS>
+            </b-card-text>
           </b-tab>
           <b-tab title="HTML,CSS">
             <b-card-text>
@@ -74,6 +76,7 @@
 <script>
 import PartGIT from './components/part-git'
 import PartHTML from './components/part-html'
+import PartJS from './components/part-javascript'
 import VueEvent from './components/vue-event'
 import VueRouterEx from './components/vue-router'
 import VueCSSBind from './components/vue-css-bind'
@@ -83,7 +86,7 @@ import VueComputed from './components/vue-computed'
 import VueEtc from './components/vue-etc'
 export default {
   name: 'app',
-  components: { PartGIT, PartHTML, VueEvent, VueRouterEx, VueCSSBind, VueEmit, VueBus, VueComputed, VueEtc },
+  components: { PartGIT, PartHTML, VueEvent, VueRouterEx, VueCSSBind, VueEmit, VueBus, VueComputed, VueEtc, PartJS },
   data () {
     return {
       totalClicks: 0,

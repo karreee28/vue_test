@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import PartGIT from './components/part-git' //import name from 'path'
 import PartHTML from './components/part-html'
+import PartJS from './components/part-javascript'
 import VueEvent from './components/vue-event'
 import VueRouterEx from './components/vue-router'
 import VueCSSBind from './components/vue-css-bind'
@@ -16,6 +17,7 @@ Vue.use(VueRouter);
 const routes = [ //path 배열 선언
 	{ path: '/git', name: 'PartGIT', component: PartGIT }, //path 지정
 	{ path: '/html', name: 'PartHTML', component: PartHTML },
+	{ path: '/js', name: 'PartJS', component: PartJS },
 	{ path: '/event', name: 'VueEvent', component: VueEvent },
 	{ path: '/router', name: 'VueRouter', component: VueRouterEx },
 	{ path: '/binding', name: 'VueCSSBind', component: VueCSSBind },
