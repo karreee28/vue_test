@@ -8,6 +8,8 @@ import VueRouterEx from './components/vue-router'
 import VueCSSBind from './components/vue-css-bind'
 import VueEmit from './components/vue-emit'
 import VueBus from './components/vue-bus'
+import VueComputed from './components/vue-computed'
+import VueEtc from './components/vue-etc'
 
 Vue.use(VueRouter);
 
@@ -19,6 +21,8 @@ const routes = [ //path 배열 선언
 	{ path: '/binding', name: 'VueCSSBind', component: VueCSSBind },
 	{ path: '/emit', name: 'VueEmit', component: VueEmit },
 	{ path: '/bus', name: 'VueBus', component: VueBus },
+	{ path: '/computed', name: 'VueComputed', component: VueComputed },
+	{ path: '/etc', name: 'VueEtc', component: VueEtc },
 ]
 
 export default new VueRouter({

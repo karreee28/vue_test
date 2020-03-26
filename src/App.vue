@@ -10,7 +10,12 @@
               <VueRouterEx></VueRouterEx>
             </b-card-text>
           </b-tab>
-          <b-tab title="Vue - $emit, bus" active>
+          <b-tab title="Vue - computed, watch" active>
+            <b-card-text>
+              <VueComputed></VueComputed>
+            </b-card-text>
+          </b-tab>
+          <b-tab title="Vue - $emit, bus">
             <b-card-text>
               <section class="wrap">
                 <h2>Vue.js $emit</h2>
@@ -36,6 +41,11 @@
           <b-tab title="Vue - 이벤트 한정자" >
             <b-card-text>
               <VueEvent></VueEvent>
+            </b-card-text>
+          </b-tab>
+          <b-tab title="Vue - 기타 개념 정리">
+            <b-card-text>
+              <VueEtc></VueEtc>
             </b-card-text>
           </b-tab>
           <b-tab title="Javascript">
@@ -69,9 +79,11 @@ import VueRouterEx from './components/vue-router'
 import VueCSSBind from './components/vue-css-bind'
 import VueEmit from './components/vue-emit'
 import VueBus from './components/vue-bus'
+import VueComputed from './components/vue-computed'
+import VueEtc from './components/vue-etc'
 export default {
   name: 'app',
-  components: { PartGIT, PartHTML, VueEvent, VueRouterEx, VueCSSBind, VueEmit, VueBus },
+  components: { PartGIT, PartHTML, VueEvent, VueRouterEx, VueCSSBind, VueEmit, VueBus, VueComputed, VueEtc },
   data () {
     return {
       totalClicks: 0,
