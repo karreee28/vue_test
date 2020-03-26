@@ -20,7 +20,8 @@ export default {
     }
   },
   methods: {
-    flipColor() {
+    flipColor : function () {
+      console.log('aa');
       this.color = !this.color;
     }
 

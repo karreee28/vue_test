@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router' //import name from 'path'
+import VueRouter from 'vue-router' 
 
-import PartGIT from './components/part-git'
+import PartGIT from './components/part-git' //import name from 'path'
 import PartHTML from './components/part-html'
 import VueEvent from './components/vue-event'
 import VueRouterEx from './components/vue-router'

@@ -12,7 +12,7 @@ export default {
     }
   },
   methods: {
-    clickCount () {
+    clickCount : function () {
       this.clicks++
       this.$emit('totalClick') //부모 컴포넌트에게 totalClick이라는 이름으로 이벤트 전달.
     },
