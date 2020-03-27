@@ -5,12 +5,12 @@
     <div class="tabW">
       <b-card no-body>
         <b-tabs pills card vertical>
-          <b-tab title="Vue - Router" >
+          <b-tab title="Vue - Router" active>
             <b-card-text>
               <VueRouterEx></VueRouterEx>
             </b-card-text>
           </b-tab>
-          <b-tab title="Vue - computed, watch" active>
+          <b-tab title="Vue - computed, watch">
             <b-card-text>
               <VueComputed></VueComputed>
             </b-card-text>
@@ -18,7 +18,7 @@
           <b-tab title="Vue - $emit, bus">
             <b-card-text>
               <section class="wrap">
-                <h2>Vue.js $emit</h2>
+                <h2>Vue.js $emit, bus</h2>
                 <article>
                   <p>하위 컴포넌트에서 부모 컴포넌트(App.vue 포함)로 이벤트 전달</p>
                   <VueEmit @totalClick="totalClickUp"></VueEmit> <!--자식 컴포넌트로부터 totalClick 이벤트를 받아서 totalClickUp 함수 실행 -->
